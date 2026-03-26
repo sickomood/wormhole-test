@@ -1,13 +1,14 @@
 <html>
 <body>
-
 <h1>Wormhole Test</h1>
 
-<div id="out">Loading...</div>
-
 <script>
-document.getElementById("out").innerText =
-Wormhole.showSecretMessage();
+try {
+    var prefs = window.localStorage;
+    document.write("<pre>" + JSON.stringify(prefs) + "</pre>");
+} catch(e) {
+    document.write("Error: " + e);
+}
 </script>
 
 </body>
